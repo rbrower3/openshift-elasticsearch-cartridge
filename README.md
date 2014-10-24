@@ -4,7 +4,7 @@ Downloadable ElasticSearch cartridge for OpenShift.
 
 To create your scalable ElasticSearch app, run:
 
-    rhc app create <your app name> http://cartreflect-claytondev.rhcloud.com/github/ncdc/openshift-elasticsearch-cartridge -s
+    rhc app create <your app name> http://cartreflect-claytondev.rhcloud.com/github/rajanm/openshift-elasticsearch-cartridge -s
 
 **NOTE:** your app currently must be a scalable app or this cartridge will not run.
 
@@ -18,8 +18,13 @@ To add more nodes to the cluster, simply add more gears:
 
 Plugins
 =======
-To install ElasticSearch plugins, edit the `plugins.txt` file, commit, and push your changes.
+To install ElasticSearch plugins -
+* create new app in openshift
+* edit the `plugins.txt` file 
+* commit
+* push your changes to openshift.
 
+The above steps have been tested in OpenShift Online (v2). For Openshift Enterprise, in case it does not have internet access, you may need to copy the plugins and install them.
 
 License
 =======

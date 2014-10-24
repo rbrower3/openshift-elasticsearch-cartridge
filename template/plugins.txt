@@ -17,7 +17,7 @@
 ##   http://mobz.github.io/elasticsearch-head
 
 ## Uncomment line below to install this plugin
-#mobz/elasticsearch-head
+## mobz/elasticsearch-head
 
 ## Description:
 ##   Paramedic is a simple yet sexy tool to monitor and inspect
@@ -29,7 +29,7 @@
 ##   https://github.com/karmi/elasticsearch-paramedic
 
 ## Uncomment line below to install this plugin
-#karmi/elasticsearch-paramedic
+## karmi/elasticsearch-paramedic
 
 ## Description:
 ##   Site plugin for Elasticsearch to help understand and debug queries.
@@ -38,7 +38,7 @@
 ##   https://github.com/polyfractal/elasticsearch-inquisitor
 
 ## Uncomment line below to install this plugin
-#polyfractal/elasticsearch-inquisitor
+## polyfractal/elasticsearch-inquisitor
 
 ## Description:
 ##   SegmentSpy is a tool to watch the segments in your indices.
@@ -49,4 +49,13 @@
 ##   https://github.com/polyfractal/elasticsearch-segmentspy
 
 ## Uncomment line below to install this plugin
-#polyfractal/elasticsearch-segmentspy
+## polyfractal/elasticsearch-segmentspy
+
+## Description:
+## Plugin shows the elasticsearch node and cluster stats.
+##
+## URL:
+##   http://www.elasticsearch.org/overview/marvel/
+
+## Uncomment line below to install this plugin
+## elasticsearch/marvel/latest

@@ -363,3 +363,7 @@ discovery.zen.ping.unicast.hosts: ${OPENSHIFT_ELASTICSEARCH_CLUSTER}
 #monitor.jvm.gc.ConcurrentMarkSweep.warn: 10s
 #monitor.jvm.gc.ConcurrentMarkSweep.info: 5s
 #monitor.jvm.gc.ConcurrentMarkSweep.debug: 2s
+
+################################## Marvel Logging #############################
+marvel.agent.exporter.es.hosts: ${OPENSHIFT_ELASTICSEARCH_IP}:${OPENSHIFT_ELASTICSEARCH_PORT}
+marvel.agent.interval: 60s
