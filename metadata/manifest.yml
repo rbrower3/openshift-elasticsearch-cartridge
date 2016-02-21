@@ -1,11 +1,11 @@
 Name: elasticsearch
 Cartridge-Short-Name: ELASTICSEARCH
-Display-Name: ElasticSearch 1.7.1
-Description: "ElasticSearch 1.7.1"
-Version: 1.7.1
+Display-Name: ElasticSearch 2.2.0
+Description: "ElasticSearch 2.2.0"
+Version: 2.2.0
 License: Apache
 Vendor: elasticsearch.org
-Cartridge-Version: 1.7.1
+Cartridge-Version: 2.2.0
 Cartridge-Vendor: rbrower3
 
 Categories:
@@ -14,7 +14,7 @@ Categories:
 
 Provides:
   - elasticsearch
-  - elasticsearch-1.7.1
+  - elasticsearch-2.2.0
 
 Publishes:
   publish-unicast-host:
