@@ -205,7 +205,7 @@ network.bind_host: ${OPENSHIFT_ELASTICSEARCH_IP}
 # Set the address other nodes will use to communicate with this node. If not
 # set, it is automatically derived. It must point to an actual IP address.
 #
-network.publish_host: ${PUBLISH_HOST}
+network.publish_host: ${OPENSHIFT_GEAR_DNS}
 transport.publish_port: ${OPENSHIFT_ELASTICSEARCH_TRANSPORT_PROXY_PORT}
 
 # Set both 'bind_host' and 'publish_host':
