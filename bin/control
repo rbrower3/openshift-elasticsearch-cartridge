@@ -12,7 +12,7 @@ function _install_plugins()
   if [ -n "$old_plugins"  -a "$old_plugins" != "No" ]; then #ARGH!
     echo "Removing old ElasticSearch plugins..."
     for plugin in $old_plugins; do
-      $PLUGIN_CMD --remove $plugin
+      $PLUGIN_CMD remove $plugin
     done
   fi
 
@@ -25,9 +25,9 @@ function _install_plugins()
       local name=$(echo $plugin | cut -f 1 -d =)
       local url=$(echo $plugin | cut -f 2 -d =)
       if [ "$name" == "$url" ]; then
-        $PLUGIN_CMD --install $name
+        $PLUGIN_CMD install $name
       else
-        $PLUGIN_CMD --url $url --install $name
+        $PLUGIN_CMD install $url
       fi
     done
   fi
