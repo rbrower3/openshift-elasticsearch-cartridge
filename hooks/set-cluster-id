@@ -1,5 +1,0 @@
-#!/bin/bash -e
-
-cluster_id='elasticsearch-'$OPENSHIFT_APP_UUID
-
-echo $cluster_id > $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CLUSTER_ID
