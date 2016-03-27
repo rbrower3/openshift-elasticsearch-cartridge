@@ -87,7 +87,7 @@ function restart() {
 
 function status() {
   local output=""
-  if output=$(curl http://$OPENSHIFT_RUBY_IP:$OPENSHIFT_RUBY_PORT/ &> /dev/null); then
+  if output=$(curl http://$OPENSHIFT_ELASTICSEARCH_IP:$OPENSHIFT_ELASTICSEARCH_PORT/ &> /dev/null); then
     client_result "Application is running"
   else
     client_result "Application is either stopped or inaccessible"
