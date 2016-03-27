@@ -1,4 +1,4 @@
-OpenShift ElasticSearch **2.2.0** Cartridge
+OpenShift ElasticSearch **2.2.1** Cartridge
 =================================
 Downloadable ElasticSearch cartridge for OpenShift.
 

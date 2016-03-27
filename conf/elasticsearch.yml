@@ -224,7 +224,7 @@ transport.publish_port: ${OPENSHIFT_ELASTICSEARCH_TRANSPORT_PROXY_PORT}
 #
 #http.port: 9200
 
-http.publish_port: 9203 
+#http.publish_port: 9203 
 
 # Set a custom allowed content length:
 #
