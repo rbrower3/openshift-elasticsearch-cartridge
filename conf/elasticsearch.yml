@@ -29,7 +29,8 @@
 # Cluster name identifies your cluster for auto-discovery. If you're running
 # multiple clusters on the same network, make sure you're using unique names.
 #
-cluster.name: ${OPENSHIFT_ELASTICSEARCH_CLUSTER_ID}
+cluster.name: ${ELASTICSEARCH_CLUSTER_NAME}||${OPENSHIFT_ELASTICSEARCH_CLUSTER_NAME}
+
 
 
 #################################### Node #####################################
