@@ -10,7 +10,7 @@ To create your scalable ElasticSearch app, run:
 
 **Haven't tested scaling...**
 
-This is an working attempt at updating to 2.2.0 use at your own risk.
+This is an working attempt at updating to 2.2.1 use at your own risk.
 
 
 
