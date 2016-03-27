@@ -2,6 +2,6 @@
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-cluster_id='elasticsearch-'$OPENSHIFT_GEAR_UUID
+cluster_id='elasticsearch-'$OPENSHIFT_APP_UUID
 
 echo $cluster_id > $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CLUSTER_ID
