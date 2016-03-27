@@ -2,7 +2,7 @@ Name: elasticsearch
 Cartridge-Short-Name: ELASTICSEARCH
 Display-Name: ElasticSearch 2.2.1
 Description: "ElasticSearch 2.2.1"
-Version: 2.2.0
+Version: 2.2.1
 License: Apache
 Vendor: elasticsearch.org
 Cartridge-Version: 2.2.1
