@@ -33,6 +33,12 @@ function _install_plugins()
   fi
 }
 
+function _copy_config()
+{
+  echo "Copying ElasticSearch config..."
+  cp $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/conf/elasticsearch.yml
+}
+
 function _is_running() {
   if [ -f $PID_FILE ]; then
     local zpid=$(cat $PID_FILE 2> /dev/null)
@@ -95,7 +101,8 @@ function status() {
 }
 
 function deploy() {
-   _install_plugins
+  _copy_config
+  _install_plugins
 }
 
 case "$1" in
