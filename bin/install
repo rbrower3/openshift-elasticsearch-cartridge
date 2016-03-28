@@ -1,10 +1,9 @@
 #!/bin/bash -e
 
 ##
-# Symlink config file
+# copy config file
 ##
-ln -s $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/conf/elasticsearch.yml
-
+cp $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/conf/elasticsearch.yml
 
 mkdir -p $OPENSHIFT_ELASTICSEARCH_DIR/run $OPENSHIFT_DATA_DIR/{elasticsearch,elasticsearch-plugins}
 
