@@ -24,16 +24,16 @@ if [ "x$ES_HEAP_SIZE" != "x" ]; then
 fi
 
 # Maximum amount of locked memory - enabled to set memlocked: true and prevent swapping - not working yet...
-MAX_LOCKED_MEMORY=unlimited
-
-if [ -n "$MAX_LOCKED_MEMORY" -a -z "$ES_HEAP_SIZE" ]; then
-    log_failure_msg "MAX_LOCKED_MEMORY is set - ES_HEAP_SIZE must also be set"
-    exit 1
-fi
-
-if [ -n "$MAX_LOCKED_MEMORY" ]; then
-   ulimit -l $MAX_LOCKED_MEMORY
-fi
+# MAX_LOCKED_MEMORY=unlimited
+# 
+# if [ -n "$MAX_LOCKED_MEMORY" -a -z "$ES_HEAP_SIZE" ]; then
+#     log_failure_msg "MAX_LOCKED_MEMORY is set - ES_HEAP_SIZE must also be set"
+#     exit 1
+# fi
+# 
+# if [ -n "$MAX_LOCKED_MEMORY" ]; then
+#    ulimit -l $MAX_LOCKED_MEMORY
+# fi
 
 # min and max heap sizes should be set to the same value to avoid
 # stop-the-world GC pauses during resize, and so that we can lock the
