@@ -182,7 +182,7 @@ path.plugins: ${OPENSHIFT_DATA_DIR}/elasticsearch-plugins
 #
 # Set this property to true to lock the memory:
 #
-#bootstrap.mlockall: true
+bootstrap.mlockall: true
 
 # Make sure that the ES_MIN_MEM and ES_MAX_MEM environment variables are set
 # to the same value, and that the machine has enough memory to allocate
@@ -391,4 +391,4 @@ marvel.agent.interval: 60s
 # http server. With this enabled, it may pose a security risk, so disabling
 # it unless you need it is recommended (it is disabled by default).
 #
-#http.jsonp.enable: true
+http.jsonp.enable: true

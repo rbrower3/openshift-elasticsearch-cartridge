@@ -3,7 +3,7 @@
 # check in case a user was using this mechanism
 if [ "x$ES_CLASSPATH" != "x" ]; then
     cat >&2 << EOF
-Error: Don't modify the classpath with ES_CLASSPATH. Best is to add
+Error: Do not modify the classpath with ES_CLASSPATH. Best is to add
 additional elements via the plugin mechanism, or if code must really be
 added to the main classpath, add jars to lib/ (unsupported).
 EOF
@@ -21,6 +21,18 @@ fi
 if [ "x$ES_HEAP_SIZE" != "x" ]; then
     ES_MIN_MEM=$ES_HEAP_SIZE
     ES_MAX_MEM=$ES_HEAP_SIZE
+fi
+
+# Maximum amount of locked memory - enabled to set memlocked: true and prevent swapping - not working yet...
+MAX_LOCKED_MEMORY=unlimited
+
+if [ -n "$MAX_LOCKED_MEMORY" -a -z "$ES_HEAP_SIZE" ]; then
+    log_failure_msg "MAX_LOCKED_MEMORY is set - ES_HEAP_SIZE must also be set"
+    exit 1
+fi
+
+if [ -n "$MAX_LOCKED_MEMORY" ]; then
+   ulimit -l $MAX_LOCKED_MEMORY
 fi
 
 # min and max heap sizes should be set to the same value to avoid

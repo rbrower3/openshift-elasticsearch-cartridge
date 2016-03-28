@@ -52,10 +52,18 @@
 ## polyfractal/elasticsearch-segmentspy
 
 ## Description:
+## Plugin license for Marvel - etc.
+## **todo add license code installer** 
+## URL:
+##   http://www.elasticsearch.org/overview/marvel/
+## Uncomment line below to install this plugin
+# license
+
+## Description:
 ## Plugin shows the elasticsearch node and cluster stats.
-##
+## Must install license first (uncomment it)
 ## URL:
 ##   http://www.elasticsearch.org/overview/marvel/
 
 ## Uncomment line below to install this plugin
-## elasticsearch/marvel/latest
+# marvel-agent
