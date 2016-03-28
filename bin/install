@@ -1,15 +1,20 @@
 #!/bin/bash -e
 
+##
+# Symlink config files
+##
+ln -s $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/conf/elasticsearch.yml
+ln -s $OPENSHIFT_REPO_DIR/logging.yml $OPENSHIFT_ELASTICSEARCH_DIR/conf/logging.yml
+
+
 mkdir -p $OPENSHIFT_ELASTICSEARCH_DIR/run $OPENSHIFT_DATA_DIR/{elasticsearch,elasticsearch-plugins}
 
 touch $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CLUSTER
-
 
 ##
 # Set the cluster name as env variable so this can be changed later using the cli
 ##
 touch $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CLUSTER_NAME
-
 
 cluster_name=$OPENSHIFT_APP_NAME'-'$OPENSHIFT_NAMESPACE
 echo $cluster_name > $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CLUSTER_NAME
@@ -19,7 +24,6 @@ echo $cluster_name > $OPENSHIFT_ELASTICSEARCH_DIR/env/OPENSHIFT_ELASTICSEARCH_CL
 # Set ES_HEAP_SIZE to 1/2 gear space in the case of a small gear this would be 1/2 of 512m -> 256m
 ##
 touch $OPENSHIFT_ELASTICSEARCH_DIR/env/ES_HEAP_SIZE
-
 
 let MEMORY=$OPENSHIFT_GEAR_MEMORY_MB/2
 echo $MEMORY"m" > $OPENSHIFT_ELASTICSEARCH_DIR/env/ES_HEAP_SIZE
