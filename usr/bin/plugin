@@ -25,12 +25,11 @@ ES_HOME=`cd "$ES_HOME"; pwd`
 
 # Sets the default values for elasticsearch variables used in this script
 if [ -z "$CONF_DIR" ]; then
-  CONF_DIR="/etc/elasticsearch"
+  CONF_DIR="$ES_HOME/config"
 fi
 
 # The default env file is defined at building/packaging time.
-# For a deb package, the value is "/etc/default/elasticsearch".
-ES_ENV_FILE="/etc/default/elasticsearch"
+ES_ENV_FILE=""
 
 # If an include is specified with the ES_INCLUDE environment variable, use it
 if [ -n "$ES_INCLUDE" ]; then
