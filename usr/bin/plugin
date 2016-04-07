@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 CDPATH=""
 SCRIPT="$0"
 
@@ -24,12 +25,12 @@ ES_HOME=`cd "$ES_HOME"; pwd`
 
 # Sets the default values for elasticsearch variables used in this script
 if [ -z "$CONF_DIR" ]; then
-  CONF_DIR="$ES_HOME/config"
+  CONF_DIR="/etc/elasticsearch"
 fi
 
 # The default env file is defined at building/packaging time.
-# For a tar.gz package, the value is "".
-ES_ENV_FILE=""
+# For a deb package, the value is "/etc/default/elasticsearch".
+ES_ENV_FILE="/etc/default/elasticsearch"
 
 # If an include is specified with the ES_INCLUDE environment variable, use it
 if [ -n "$ES_INCLUDE" ]; then
@@ -108,6 +109,5 @@ fi
 # export on separate line for shells that do not support combining definition and export
 HOSTNAME=`hostname | cut -d. -f1`
 export HOSTNAME
-
 
 eval "$JAVA" -client -Delasticsearch -Des.path.home="\"$ES_HOME\"" $properties -cp "\"$ES_HOME/lib/*\"" org.elasticsearch.plugins.PluginManagerCliParser $args

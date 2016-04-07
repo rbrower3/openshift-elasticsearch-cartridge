@@ -3,14 +3,14 @@
 # check in case a user was using this mechanism
 if [ "x$ES_CLASSPATH" != "x" ]; then
     cat >&2 << EOF
-Error: Do not modify the classpath with ES_CLASSPATH. Best is to add
+Error: Don't modify the classpath with ES_CLASSPATH. Best is to add
 additional elements via the plugin mechanism, or if code must really be
 added to the main classpath, add jars to lib/ (unsupported).
 EOF
     exit 1
 fi
 
-ES_CLASSPATH="$ES_HOME/lib/elasticsearch-2.2.1.jar:$ES_HOME/lib/*"
+ES_CLASSPATH="$ES_HOME/lib/elasticsearch-2.3.1.jar:$ES_HOME/lib/*"
 
 if [ "x$ES_MIN_MEM" = "x" ]; then
     ES_MIN_MEM=256m
@@ -22,18 +22,6 @@ if [ "x$ES_HEAP_SIZE" != "x" ]; then
     ES_MIN_MEM=$ES_HEAP_SIZE
     ES_MAX_MEM=$ES_HEAP_SIZE
 fi
-
-# Maximum amount of locked memory - enabled to set memlocked: true and prevent swapping - not working yet...
-# MAX_LOCKED_MEMORY=unlimited
-# 
-# if [ -n "$MAX_LOCKED_MEMORY" -a -z "$ES_HEAP_SIZE" ]; then
-#     log_failure_msg "MAX_LOCKED_MEMORY is set - ES_HEAP_SIZE must also be set"
-#     exit 1
-# fi
-# 
-# if [ -n "$MAX_LOCKED_MEMORY" ]; then
-#    ulimit -l $MAX_LOCKED_MEMORY
-# fi
 
 # min and max heap sizes should be set to the same value to avoid
 # stop-the-world GC pauses during resize, and so that we can lock the
