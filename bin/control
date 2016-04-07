@@ -36,7 +36,7 @@ function _install_plugins()
 function _copy_config()
 {
   echo "Copying ElasticSearch config..."
-  cp $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/usr/conf/elasticsearch.yml
+  cp $OPENSHIFT_REPO_DIR/elasticsearch.yml $OPENSHIFT_ELASTICSEARCH_DIR/usr/config/elasticsearch.yml
 }
 
 function _is_running() {
