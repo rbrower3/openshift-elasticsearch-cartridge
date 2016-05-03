@@ -1,8 +1,8 @@
-OpenShift ElasticSearch **2.2.1** Cartridge
+OpenShift ElasticSearch **2.3.2** Cartridge
 =================================
 Downloadable ElasticSearch cartridge for OpenShift.
 
-This is an working attempt at updating to 2.2.1 use at your own risk. I have had a three node cluster running since 3.28.2016
+This is an working attempt at updating to 2.3.2 use at your own risk. I have had a three node cluster running since 3.28.2016
 Below is obviously not the method for instaling the app - if things are stable for a bit longer i'll request a git pull from rbrower's branch.
 
 I've moved some things around and made small changes to the rbrower branch:
