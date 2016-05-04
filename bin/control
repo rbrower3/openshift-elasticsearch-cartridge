@@ -8,7 +8,7 @@ function _install_plugins()
 {
   local PLUGIN_CMD="$OPENSHIFT_ELASTICSEARCH_DIR/usr/bin/plugin -Des.path.plugins=$OPENSHIFT_DATA_DIR/elasticsearch-plugins"
 
-  local old_plugins=$($PLUGIN_CMD --list | awk '/-/{print $2}' | xargs)
+  local old_plugins=$($PLUGIN_CMD list | awk '/-/{print $2}' | xargs)
   if [ -n "$old_plugins"  -a "$old_plugins" != "No" ]; then #ARGH!
     echo "Removing old ElasticSearch plugins..."
     for plugin in $old_plugins; do
