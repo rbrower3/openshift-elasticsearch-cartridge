@@ -12,9 +12,9 @@ I've moved some things around and made small changes to the rbrower branch:
   - updated install for marvel in plugins.txt this includes instructions for adding the required license.
   - set the ``ES_HEAP_SIZE`` to the correct settings (1/2 of gear memory) this is also set as an env variable and should change per gear size.
 
-there is currently a manifest.yml you can use for insatll at:
+there is currently a manifest.yml you can use for install at:
 
-    http://wwwwwwwww.un.salted.nu/manifest.yml
+    https://raw.githubusercontent.com/unsalted/openshift-elasticsearch-cartridge/master/metadata/manifest.yml
 
 To create your scalable ElasticSearch app, run:
 
